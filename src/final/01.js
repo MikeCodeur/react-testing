@@ -2,17 +2,14 @@
 // http://localhost:3000/alone/final/01.js
 
 import * as React from 'react'
+import HowToTests from '../components/howToTest'
 
-function Composant() {
-  return (
-    <div className="container">Hello template</div>
-  )
-}
+const fileName = '01.js'
 
 function App() {
   return (
     <div>
-     <Composant />
+      <HowToTests solution={true} fileName={fileName}  />
     </div>
   )
 }
