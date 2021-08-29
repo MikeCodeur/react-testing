@@ -5,7 +5,7 @@ import * as React from 'react'
 import Hello from '../../components/helloreset'
 import {render,screen, fireEvent} from '@testing-library/react'
 
-test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
+test('Affiche "Bonjour John" et "Merci" lors d\'un click avec reset', () => {
   render(<Hello name="John"/>)
   const envoyer = screen.getByRole('button', {name: /envoyer/i})
   const reset = screen.getByRole('button', {name: /reset/i})
