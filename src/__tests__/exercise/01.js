@@ -1,49 +1,32 @@
-// simple test with React Testing Library
-// http://localhost:3000/counter
+// test basique avec ReactDOM
+// http://localhost:3000/alone/exercise/01.js
+/* eslint-disable no-unused-vars */
 
 import * as React from 'react'
 import ReactDOM from 'react-dom'
-// 🐨 import the `render` and `fireEvent` utilities from '@testing-library/react'
-import Counter from '../../components/counter'
+import Hello from '../../components/hello'
 
-// 💣 remove this. React Testing Library does this automatically!
-beforeEach(() => {
-  document.body.innerHTML = ''
+test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
+ 
+  // 🐶 créé une div pour faire le rendu du composant Hello (🤖 document.createElement)
+  
+  // 🐶 Ajoute ensuite cette div dans le body du document
+  // 🤖 document.body.append(div)
+ 
+  // 🐶 utilise `ReactDOM.render` pour faire le rendu de <Hello> avec le prop name='John'
+
+  // 🐶 récupére le bouton 'envoyer' 
+  // 🤖 div.querySelector
+  
+  // 🐶 récupère l'élément du libéllé qui est dans la deuxième div
+  // 🤖 label = div.firstChild.querySelector('div'))
+
+  // 🐶 teste que label.textContent soit égal = `Bonjour John`
+  // 🤖 expect(element à tester).toBe(`Bonjour John`)
+
+  // 🐶 simule un click sur le bouton 
+  // 🤖 envoyer.click()
+
+  // 🐶 teste que label.textContent soit maintenant égal = `Merci`
 })
 
-test('counter increments and decrements when the buttons are clicked', () => {
-  // 💣 remove these two lines, React Testing Library will create the div for you
-  const div = document.createElement('div')
-  document.body.append(div)
-
-  // 🐨 swap ReactDOM.render with React Testing Library's render
-  // Note that React Testing Library's render doesn't need you to pass a `div`
-  // so you only need to pass one argument. render returns an object with a
-  // bunch of utilities on it. For now, let's just grab `container` which is
-  // the div that React Testing Library creates for us.
-  // 💰 const {container} = render(<Counter />)
-  ReactDOM.render(<Counter />, div)
-
-  // 🐨 instead of `div` here you'll want to use the `container` you get back
-  // from React Testing Library
-  const [decrement, increment] = div.querySelectorAll('button')
-  const message = div.firstChild.querySelector('div')
-
-  expect(message.textContent).toBe('Current count: 0')
-
-  // 🐨 replace the next two statements with `fireEvent.click(button)`
-  const incrementClickEvent = new MouseEvent('click', {
-    bubbles: true,
-    cancelable: true,
-    button: 0,
-  })
-  increment.dispatchEvent(incrementClickEvent)
-  expect(message.textContent).toBe('Current count: 1')
-  const decrementClickEvent = new MouseEvent('click', {
-    bubbles: true,
-    cancelable: true,
-    button: 0,
-  })
-  decrement.dispatchEvent(decrementClickEvent)
-  expect(message.textContent).toBe('Current count: 0')
-})

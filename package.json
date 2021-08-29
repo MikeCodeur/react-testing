@@ -1,12 +1,12 @@
 {
-  "name": "@mikecodeur/react-module-template",
-  "title": "React Module Template",
-  "description": "Module template pour la création future de module de formation",
+  "name": "@mikecodeur/react-testing",
+  "title": "React Testing Module",
+  "description": "Module sur les tests de la formation React Js Entreprise",
   "author": "Mike Codeur <contact@mikecodeur.com> (https://mikecodeur.com/)",
   "version": "1.0.0",
   "private": true,
   "keywords": [],
-  "homepage": "https://react-module-template.mikecodeur.com",
+  "homepage": "https://react-testing.mikecodeur.com",
   "license": "GPL-3.0-only",
   "main": "src/index.js",
   "engines": {
@@ -76,10 +76,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikecodeur/react-module-template.git"
+    "url": "git+https://github.com/mikecodeur/react-testing.git"
   },
   "bugs": {
-    "url": "https://github.com/mikecodeur/react-module-template/issues"
+    "url": "https://github.com/mikecodeur/react-testing/issues"
   },
   "msw": {
     "workerDirectory": "public"

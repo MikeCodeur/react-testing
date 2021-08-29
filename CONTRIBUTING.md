@@ -14,7 +14,7 @@ Merci aux contributeurs!
 > à partir des branches de votre fork. Pour ce faire, exécutez :  
 >
 > ```
-> git remote add upstream https://github.com/mikecodeur/react-module-template.git
+> git remote add upstream https://github.com/mikecodeur/react-testing.git
 > git fetch upstream
 > git branch --set-upstream-to=upstream/main main
 > ```
@@ -32,4 +32,4 @@ Regarder les [tickets en cours][issues]
 
 [pullreqyoutube]:
   https://www.youtube.com/watch?v=waEb2c9NDL8
-[issues]: https://github.com/mikecodeur/react-module-template/issues
+[issues]: https://github.com/mikecodeur/react-testing/issues

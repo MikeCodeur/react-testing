@@ -3,14 +3,14 @@
 
 import * as React from 'react'
 import '../styles.css'
-import Hello from '../components/hello'
+import HelloReset from '../components/helloreset'
 import HowToTests from '../components/howToTest'
-const fileName = '01.js'
+const fileName = '02.js'
 
 function App() {
   return (
     <div>
-      <Hello name="John" />
+      <HelloReset name="John" />
       <hr/>
       <HowToTests solution={false} fileName={fileName}  />
     </div>

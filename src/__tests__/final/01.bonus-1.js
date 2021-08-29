@@ -1,9 +1,13 @@
 // test basique avec ReactDOM
+// 🚀 Initialisation du DOM pour les tests
 // http://localhost:3000/alone/final/01.js
 
-import * as React from 'react'
 import ReactDOM from 'react-dom'
 import Hello from '../../components/hello'
+
+beforeEach(() => {
+  document.body.innerHTML = null
+})
 
 test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
   const div = document.createElement('div')
@@ -18,5 +22,3 @@ test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
   envoyer.click()
   expect(label.textContent).toBe(`Merci`)
 })
-
-

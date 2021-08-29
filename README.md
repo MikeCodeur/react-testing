@@ -1,12 +1,10 @@
 <div>
-  <h1 align="center"><a href="https://MikeCodeur.Com/fundamentals">React Module Name 🚀 MikeCodeur.Com</a></h1>
+  <h1 align="center"><a href="https://MikeCodeur.Com/fundamentals">React Testing 🚀 MikeCodeur.Com</a></h1>
   <strong>
-    Apprendre les bases de XXX
-    Et de YYY
+    Rediger des tests pour nos applications React
   </strong>
   <p>
-    Apprenez tout ce dont vous avez besoin pour être efficace avec XXX. Lorsque vous aurez terminé, vous serez prêt à
-    créez YYY pour créer d'excellentes expériences pour les utilisateurs de votre application.
+ 
   </p>
 
   <a href="https://formations.mikecodeur.com/react-js-entreprise">
@@ -76,8 +74,8 @@ executer cette commande pour pour demarrer la configuration du projet :
 
 
 ```
-git clone https://github.com/mikecodeur/react-module-template.git
-cd react-module-template
+git clone https://github.com/mikecodeur/react-testing.git
+cd react-testing
 npm run init
 ```
 
@@ -116,7 +114,7 @@ L'application est basé sur react-create-app et
 [react-scripts](https://create-react-app.dev/).
 
 Vous pouvez aussi acceder au déploiement
-[déploiement sur Netlify](https://react-module-template.netlify.app/).
+[déploiement sur Netlify](https://react-testing.netlify.app/).
 
 ## Executer les tests
 
@@ -166,7 +164,7 @@ Merci aux contributeurs
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://mikecodeur.com"><img src="https://avatars.githubusercontent.com/u/595162?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mike Codeur</b></sub></a><br /><a href="https://github.com/mikecodeur/react-module-template/commits?author=mikecodeur" title="Code">💻</a> <a href="https://github.com/mikecodeur/react-module-template/commits?author=mikecodeur" title="Documentation">📖</a> <a href="#infra-mikecodeur" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/mikecodeur/react-module-template/commits?author=mikecodeur" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://mikecodeur.com"><img src="https://avatars.githubusercontent.com/u/595162?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mike Codeur</b></sub></a><br /><a href="https://github.com/mikecodeur/react-testing/commits?author=mikecodeur" title="Code">💻</a> <a href="https://github.com/mikecodeur/react-testing/commits?author=mikecodeur" title="Documentation">📖</a> <a href="#infra-mikecodeur" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/mikecodeur/react-testing/commits?author=mikecodeur" title="Tests">⚠️</a></td>
   </tr>
   
 </table>
@@ -193,16 +191,16 @@ Thank you! https://go.mikecodeur.com/cours-react-avis
 [npm]: https://www.npmjs.com/
 [node]: https://nodejs.org
 [git]: https://git-scm.com/
-[build-badge]: https://img.shields.io/github/workflow/status/mikecodeur/react-module-template/validate/main?logo=github&style=flat-square
-[build]: https://github.com/mikecodeur/react-module-template/actions?query=workflow%3Avalidate
+[build-badge]: https://img.shields.io/github/workflow/status/mikecodeur/react-testing/validate/main?logo=github&style=flat-square
+[build]: https://github.com/mikecodeur/react-testing/actions?query=workflow%3Avalidate
 [license-badge]: https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square
-[license]: https://github.com/mikecodeur/react-module-template/blob/main/LICENSE
+[license]: https://github.com/mikecodeur/react-testing/blob/main/LICENSE
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
-[coc]: https://github.com/mikecodeur/react-module-template/blob/main/CODE_OF_CONDUCT.md
+[coc]: https://github.com/mikecodeur/react-testing/blob/main/CODE_OF_CONDUCT.md
 [emojis]: https://github.com/mikecodeur/all-contributors#emoji-key
 [all-contributors]: https://github.com/mikecodeur/all-contributors
-[all-contributors-badge]: https://img.shields.io/github/all-contributors/mikecodeur/react-module-template?color=orange&style=flat-square
+[all-contributors-badge]: https://img.shields.io/github/all-contributors/mikecodeur/react-testing?color=orange&style=flat-square
 [win-path]: https://tutorielsgeek.com/comment-definir-des-variables-denvironnement-dans-windows-10/
 [mac-path]: https://support.apple.com/fr-tn/guide/terminal/apd382cc5fa-4f58-4449-b20a-41c53c006f8f/mac
-[issue]: https://github.com/mikecodeur/react-module-template/issues/new
+[issue]: https://github.com/mikecodeur/react-testing/issues/new
 <!-- prettier-ignore-end -->
