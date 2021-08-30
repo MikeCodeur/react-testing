@@ -13,7 +13,6 @@ function LoginForm({onSubmit}) {
       <label htmlFor="username">Nom d'utilisateur :</label>
       <input 
         id="username"
-        name="username"
         type="text"
         value={username}
         onChange={e => setUsername(e.target.value)}
@@ -22,7 +21,6 @@ function LoginForm({onSubmit}) {
       <label htmlFor="password">Mot de passe :</label>
       <input
         id="password"
-        name="password"
         type="text"
         value={password}
         onChange={e => setPassword(e.target.value)}

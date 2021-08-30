@@ -5,17 +5,14 @@ import * as React from 'react'
 import LoginForm from '../../components/loginForm'
 import {render,screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import faker from 'faker'
 
 test('formulaire de login avec username et password" ', () => {
-  let submittedUsername
-  let submittedPassword
-  const handleSubmit = (formData) => {
-   submittedUsername = formData.username
-   submittedPassword = formData.password
-  }
+
+  const handleSubmit = jest.fn()
   render(<LoginForm onSubmit={handleSubmit}/>)
-  const username = 'root'
-  const password = 'passwd'
+  const username = faker.internet.userName()
+  const password = faker.internet.password()
 
   const usernameElement = screen.getByText(/Nom d'utilisateur :/i)
   const passwordElement = screen.getByText(/Mot de passe :/i)
@@ -25,8 +22,12 @@ test('formulaire de login avec username et password" ', () => {
   userEvent.type(passwordElement, password)
   userEvent.click(submitbuttonElement)
 
-  expect(submittedUsername).toBe(username)
-  expect(submittedPassword).toBe(password)
+  expect(handleSubmit).toHaveBeenCalled()
+  expect(handleSubmit).toHaveBeenCalledWith({
+    username,
+    password,
+  })
+  expect(handleSubmit).toHaveBeenCalledTimes(1)
 })
 
 

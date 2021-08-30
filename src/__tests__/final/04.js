@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import LoginForm from '../../components/loginForm'
-import {render,screen, fireEvent} from '@testing-library/react'
+import {render, screen, fireEvent} from '@testing-library/react'
 
 test('formulaire de login avec username et password" ', () => {
   let submittedUsername

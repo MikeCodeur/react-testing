@@ -1,30 +1,35 @@
 // Test en boite noir 
 // http://localhost:3000/alone/final/03.js
+/* eslint-disable no-unused-vars */
 
 import * as React from 'react'
-import Hello from '../../components/helloreset'
+import LoginForm from '../../components/loginForm'
 import {render, screen, fireEvent} from '@testing-library/react'
 
-test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
-  // ⛏️ supprime {container} car nous utiliserons `screen`
-  const {container} = render(<Hello name="John" />)
+test('formulaire de login avec username et password" ', () => {
+  // 🐶 créé 2 variables : 'submittedUsername' et 'submittedPassword' qui seront mis à jour par une fonction handleSubmit
 
-  // 🐶 utilise `getByRole` pour recupérer un 'button'
-  // 📑 https://testing-library.com/docs/queries/byrole/
-  // 🤖 screen.getByRole('button')
-  // Ici nous avons maintenant 2 buttons, pour pouvoir les distinguer il est possible 
-  // ajouter un 2eme argument. nous allons utiliser 'name' pour savoir si 
-  // l'on veut le bouton 'envoyer' ou 'reset'
-  // 🤖 screen.getByRole('button', {name: /envoyer/i})
-  const [envoyer, reset] = container.querySelectorAll('input')
+  // 🐶 créé une fonction 'handleSubmit' avec un paramètre (object qui contient 'username' et 'password')
+  // met à jour 'submittedUsername' et 'submittedPassword
+  
+  // 🐶 fait le rendu de LoginForm avec le prop onSubmit={handleSubmit}
+  // 🤖 render(<LoginForm 
+  
+  // 🐶 créé 2 variables pour les tests : 'username' et 'password' avec des valeurs de tests
 
-  // 🐶 utilise `getByRole` pour recupérer le libellé, le role utilisé est 'status'
-  const label = container.firstChild.querySelector('div')
+  // 🐶 récupère les elements DOM suivants : les champs input 'username' et 'login' (leur role est 'textbox' )
+  // en utilisant 'getByRole' et le 'name'
+  // 🤖 screen.getByRole('textbox',{ name: /Nom d'utilisateur :/i}
 
-  expect(label).toHaveTextContent(`Bonjour John`)
-  fireEvent.click(envoyer)
-  expect(label).toHaveTextContent(`Merci`)
-  fireEvent.click(reset)
-  expect(label).toHaveTextContent(`Bonjour John`)
+  // 🐶 récupère l'element DOM suivant : le bouton (son role est 'button' )
+  // en utilisant 'getByRole' et le 'name' 
+
+  // 🐶 modifie la valeur des 2 champs input avec `username` et `password` en utilisant
+  // 🤖 fireEvent.change(usernameElement, {target: { value: username }});
+
+  // 🐶 simulule un click sur le button connexion
+
+  // 🐶 test que 'submittedUsername' soit egal à 'username'
+  // 🐶 test que 'submittedPassword' soit egal à 'password'
+  
 })
-
