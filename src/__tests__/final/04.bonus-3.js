@@ -1,4 +1,5 @@
 // Test en boite noir 
+// 🚀 dispatchEvent et MouseEven
 // http://localhost:3000/alone/final/02.js
 
 import * as React from 'react'

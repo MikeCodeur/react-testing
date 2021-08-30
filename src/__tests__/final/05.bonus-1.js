@@ -1,9 +1,10 @@
-// mocker les requêtes HTTP
-// http://localhost:3000/alone/final/05.js
+// Test en boite noir 
+// 🚀 waitForElementToBeRemoved
+// http://localhost:3000/alone/final/02.js
 
 import * as React from 'react'
 import LoginSubmit from '../../components/loginSubmit'
-import {render,screen, waitFor} from '@testing-library/react'
+import {render,screen, waitForElementToBeRemoved} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import faker from 'faker'
 
@@ -12,6 +13,7 @@ import {setupServer} from 'msw/node'
 
 const sleep = t => new Promise((resolve) => setTimeout(resolve, t))
 const delay = 100
+
 const server = setupServer(
   rest.post(
     'https://example.com/api/login',
@@ -45,7 +47,7 @@ test('login api affiche le nom de l\'utilisateur connecté" ',async () => {
   userEvent.type(passwordElement, password)
   userEvent.click(submitbuttonElement)
 
-  await waitFor(() => sleep(150))
+  await waitForElementToBeRemoved(() => screen.getByText(/chargement.../i))
   expect(screen.getByText(username)).toBeInTheDocument()
 
 })

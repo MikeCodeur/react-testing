@@ -2,29 +2,48 @@
 // http://localhost:3000/alone/final/03.js
 
 import * as React from 'react'
-import Hello from '../../components/helloreset'
-import {render, screen, fireEvent} from '@testing-library/react'
+import LoginSubmit from '../../components/loginSubmit'
+// 🐶 importe 'waitFor' de testing-library/react
+import {render,screen} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import faker from 'faker'
+// 🐶 importe 'rest' de 'msw'
+// 🐶 importe 'setupServer' de 'msw/node'
 
-test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
-  // ⛏️ supprime {container} car nous utiliserons `screen`
-  const {container} = render(<Hello name="John" />)
 
-  // 🐶 utilise `getByRole` pour recupérer un 'button'
-  // 📑 https://testing-library.com/docs/queries/byrole/
-  // 🤖 screen.getByRole('button')
-  // Ici nous avons maintenant 2 buttons, pour pouvoir les distinguer il est possible 
-  // ajouter un 2eme argument. nous allons utiliser 'name' pour savoir si 
-  // l'on veut le bouton 'envoyer' ou 'reset'
-  // 🤖 screen.getByRole('button', {name: /envoyer/i})
-  const [envoyer, reset] = container.querySelectorAll('input')
+const sleep = t => new Promise((resolve) => setTimeout(resolve, t))
 
-  // 🐶 utilise `getByRole` pour recupérer le libellé, le role utilisé est 'status'
-  const label = container.firstChild.querySelector('div')
+// 🐶 Met en place un 'server' mock de test avec 'setupServer'
+// setupServer prend en parametre une requete à mocker 
+// 📑 https://mswjs.io/docs/api/setup-server
+// Nous voulons intercepter les requetes sur "https://example.com/api/login"
+// Si 'username' ou 'password' non présent dans le body on retournera un message d'erreur
+// et un code errror 400
+// on simulera un delay de 100ms avec (🤖 ctx.delay(100) )
+// 🤖 return res(ctx.status(400), ctx.json({errorMessage: 'le password est obligatoire'})) 
 
-  expect(label).toHaveTextContent(`Bonjour John`)
-  fireEvent.click(envoyer)
-  expect(label).toHaveTextContent(`Merci`)
-  fireEvent.click(reset)
-  expect(label).toHaveTextContent(`Bonjour John`)
+// 🐶 avant tous les tests appelle `server.listen()`
+// 🐶 après tous les tests appelle `server.close()`
+
+test('login api affiche le nom de l\'utilisateur connecté" ',async () => {
+
+  render(<LoginSubmit/>)
+  
+  const username = faker.internet.userName()
+  const password = faker.internet.password()
+
+  const usernameElement = screen.getByText(/Nom d'utilisateur :/i)
+  const passwordElement = screen.getByText(/Mot de passe :/i)
+  const submitbuttonElement = screen.getByRole('button', {name: /Connexion/i})
+
+  userEvent.type(usernameElement, username)
+  userEvent.type(passwordElement, password)
+  userEvent.click(submitbuttonElement)
+
+  // 🐶 simule une attente d'api superieur à 100ms gràce à 'waitFor'
+  // utilise sleep pour simuler une attente `sleep(150)` 
+
+  // await waitFor(() => sleep(150))
+  // expect(screen.getByText(username)).toBeInTheDocument()
+
 })
-
