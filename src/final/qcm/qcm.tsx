@@ -16,7 +16,7 @@ interface IQCMInterface {
 const QCM: Array<IQCMInterface> = [
   {
     exerciseId: 'src/exercise/01.md',
-    exerciseTitle: 'useEffect : Appels HTTP simples',
+    exerciseTitle: 'test basique avec ReactDOM',
     quiz: [
       {
         question: 'Valide simplement cet exercice en cliquant sur validé',
@@ -27,58 +27,89 @@ const QCM: Array<IQCMInterface> = [
   },
   {
     exerciseId: 'src/exercise/02.md',
-    exerciseTitle: 'Manipuler le DOM',
+    exerciseTitle: 'test avec React Testing Library',
     quiz: [
       {
-        question: 'DOM cest quoi  ?',
-        options: ['chrome', 'bbb', 'sss', 'ddd'],
+        question: 'Valide simplement cet exercice en cliquant sur validé',
+        options: ['Validé', 'Non validé'],
         answer: '0',
-      },
-      {
-        question: 'HMTL est ',
-        options: ['a2', 'b2', 'c2', 'd2'],
-        answer: '2',
-      },
-      {
-        question: 'Render app',
-        options: ['a3', 'b3', 'c3', 'd3'],
-        answer: '3',
-      },
-      {
-        question: 'How heavy are you?',
-        options: ['a3', 'b3', 'c3', 'd3'],
-        answer: '1',
-      },
-      {
-        question: 'How heavy are you?',
-        options: ['a3', 'b3', 'c3', 'd3'],
-        answer: '1',
-      },
-      {
-        question: 'How heavy are you?',
-        options: ['a3', 'b3', 'c3', 'd3'],
-        answer: '1',
-      },
-      {
-        question: 'How heavy are you?',
-        options: ['a3', 'b3', 'c3', 'd3'],
-        answer: '1',
       },
     ],
   },
   {
     exerciseId: 'src/exercise/03.md',
-    exerciseTitle: 'Manipuler le style',
+    exerciseTitle: 'Test en boite noire',
     quiz: [
       {
-        question: 'LEs styles  ?',
-        options: ['css', 'jss', 'xss', 'pdf'],
+        question: 'Valide simplement cet exercice en cliquant sur validé',
+        options: ['Validé', 'Non validé'],
         answer: '0',
       },
+    ],
+  },
+  {
+    exerciseId: 'src/exercise/04.md',
+    exerciseTitle: 'Test de formulaires',
+    quiz: [
       {
-        question: 'HMTL est ',
-        options: ['a2', 'b2', 'c2', 'd2'],
-        answer: '2',
+        question: 'Valide simplement cet exercice en cliquant sur validé',
+        options: ['Validé', 'Non validé'],
+        answer: '0',
+      },
+    ],
+  },
+  {
+    exerciseId: 'src/exercise/05.md',
+    exerciseTitle: 'mocker les requêtes HTTP',
+    quiz: [
+      {
+        question: 'Valide simplement cet exercice en cliquant sur validé',
+        options: ['Validé', 'Non validé'],
+        answer: '0',
+      },
+    ],
+  },
+  {
+    exerciseId: 'src/exercise/06.md',
+    exerciseTitle: 'mocker l\'API du navigateur',
+    quiz: [
+      {
+        question: 'Valide simplement cet exercice en cliquant sur validé',
+        options: ['Validé', 'Non validé'],
+        answer: '0',
+      },
+    ],
+  },
+  {
+    exerciseId: 'src/exercise/07.md',
+    exerciseTitle: 'mocker un module',
+    quiz: [
+      {
+        question: 'Valide simplement cet exercice en cliquant sur validé',
+        options: ['Validé', 'Non validé'],
+        answer: '0',
+      },
+    ],
+  },
+  {
+    exerciseId: 'src/exercise/08.md',
+    exerciseTitle: 'test avec Contexte',
+    quiz: [
+      {
+        question: 'Valide simplement cet exercice en cliquant sur validé',
+        options: ['Validé', 'Non validé'],
+        answer: '0',
+      },
+    ],
+  },
+  {
+    exerciseId: 'src/exercise/09.md',
+    exerciseTitle: 'test de Hook personnalisé',
+    quiz: [
+      {
+        question: 'Valide simplement cet exercice en cliquant sur validé',
+        options: ['Validé', 'Non validé'],
+        answer: '0',
       },
     ],
   },
