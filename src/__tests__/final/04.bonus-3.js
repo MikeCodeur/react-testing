@@ -1,17 +1,16 @@
-// Test en boite noir 
+// Test en boite noir
 // 🚀 dispatchEvent et MouseEven
 // http://localhost:3000/alone/final/02.js
 
 import * as React from 'react'
 import LoginForm from '../../components/loginForm'
-import {render,screen} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import faker from 'faker'
 
 test('formulaire de login avec username et password" ', () => {
-
   const handleSubmit = jest.fn()
-  render(<LoginForm onSubmit={handleSubmit}/>)
+  render(<LoginForm onSubmit={handleSubmit} />)
   const username = faker.internet.userName()
   const password = faker.internet.password()
 
@@ -30,6 +29,3 @@ test('formulaire de login avec username et password" ', () => {
   })
   expect(handleSubmit).toHaveBeenCalledTimes(1)
 })
-
-
-

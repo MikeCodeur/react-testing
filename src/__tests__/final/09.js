@@ -6,7 +6,7 @@ import {render, screen} from '@testing-library/react'
 import useCapitalize from '../../components/useCapitalize'
 import userEvent from '@testing-library/user-event'
 
-function UseCapitalizeHook({children}){
+function UseCapitalizeHook({children}) {
   const {text, capitalize, uncapitalize} = useCapitalize(children)
   return (
     <div>
@@ -18,15 +18,18 @@ function UseCapitalizeHook({children}){
 }
 
 test('rendu du hook useCapitalize est des fonctions capitalize/uncapitalize', () => {
-  const texte = "Ceci Est Un Test"
+  const texte = 'Ceci Est Un Test'
   render(<UseCapitalizeHook>{texte}</UseCapitalizeHook>)
-  const capitalize = screen.getByRole('button', {name:"capitalize"})
-  const uncapitalize = screen.getByRole('button', {name: "uncapitalize"})
- 
+  const capitalize = screen.getByRole('button', {name: 'capitalize'})
+  const uncapitalize = screen.getByRole('button', {name: 'uncapitalize'})
+
   expect(screen.getByText(/texte transformé/i)).toHaveTextContent(texte)
   userEvent.click(capitalize)
-  expect(screen.getByText(/texte transformé/i)).toHaveTextContent(texte.toUpperCase())
+  expect(screen.getByText(/texte transformé/i)).toHaveTextContent(
+    texte.toUpperCase(),
+  )
   userEvent.click(uncapitalize)
-  expect(screen.getByText(/texte transformé/i)).toHaveTextContent(texte.toLowerCase())
+  expect(screen.getByText(/texte transformé/i)).toHaveTextContent(
+    texte.toLowerCase(),
+  )
 })
-

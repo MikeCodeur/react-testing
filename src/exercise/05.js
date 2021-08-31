@@ -8,12 +8,11 @@ import HowToTests from '../components/howToTest'
 const fileName = '02.js'
 
 function App() {
-  
   return (
     <div>
       <LoginSubmit />
-      <hr/>
-      <HowToTests solution={false} fileName={fileName}  />
+      <hr />
+      <HowToTests solution={false} fileName={fileName} />
     </div>
   )
 }

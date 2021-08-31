@@ -11,8 +11,8 @@ function App() {
   return (
     <div>
       <HelloReset name="John" />
-      <hr/>
-      <HowToTests solution={false} fileName={fileName}  />
+      <hr />
+      <HowToTests solution={false} fileName={fileName} />
     </div>
   )
 }

@@ -3,11 +3,7 @@
 
 import * as React from 'react'
 import LoginSubmitNotification from '../../components/loginSubmitNotification'
-import {
-  render,
-  screen,
-  waitForElementToBeRemoved,
-} from '@testing-library/react'
+import {render, screen, waitForElementToBeRemoved} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import faker from 'faker'
 import mockHandlers from '../../test/mock-handlers'
@@ -25,7 +21,6 @@ afterAll(() => server.close())
 afterEach(() => server.resetHandlers())
 
 test('affiche un message de permission `granted` de notification" ', async () => {
-
   const fakePermission = 'granted'
 
   window.Notification.requestPermission.mockImplementation(() => {
@@ -74,5 +69,4 @@ test('affiche un message de permission `denied` de notification" ', async () => 
   expect(
     screen.getByText(/veuillez autoriser les notifications/i),
   ).toBeInTheDocument()
-  
 })

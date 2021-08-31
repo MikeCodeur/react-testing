@@ -7,4 +7,4 @@ function useCapitalize(initialValue) {
   return {text, capitalize, uncapitalize}
 }
 
-export default useCapitalize;
+export default useCapitalize

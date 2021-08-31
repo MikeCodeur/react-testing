@@ -13,4 +13,3 @@ test('rendu du composent Welcome avec la langue fr', () => {
   render(<Welcome>John</Welcome>, {wrapper: Wrapper})
   expect(screen.queryByText(/Bonjour et bienvenue/i)).toBeInTheDocument()
 })
-

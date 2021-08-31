@@ -11,7 +11,6 @@ test('rendu du composent Welcome avec la langue fr', () => {
 })
 
 test('rendu du composent Welcome avec la langue en', () => {
-  render(<Welcome>John</Welcome>,{lang : 'en'})
+  render(<Welcome>John</Welcome>, {lang: 'en'})
   expect(screen.queryByText(/Hello and welcome/i)).toBeInTheDocument()
 })
-

@@ -3,13 +3,13 @@ import React from 'react'
 
 interface IQuestion {
   question: string
-  options:string[]
+  options: string[]
   answer: string
 }
 
 interface IQCMInterface {
   exerciseId: string
-  exerciseTitle : string
+  exerciseTitle: string
   quiz: IQuestion[]
 }
 
@@ -19,10 +19,10 @@ const QCM: Array<IQCMInterface> = [
     exerciseTitle: 'useEffect : Appels HTTP simples',
     quiz: [
       {
-        question: "Valide simplement cet exercice en cliquant sur validé",
-        options: ["Validé", "Non validé"],
-        answer: "0"
-      }
+        question: 'Valide simplement cet exercice en cliquant sur validé',
+        options: ['Validé', 'Non validé'],
+        answer: '0',
+      },
     ],
   },
   {
@@ -30,34 +30,40 @@ const QCM: Array<IQCMInterface> = [
     exerciseTitle: 'Manipuler le DOM',
     quiz: [
       {
-        question: "DOM cest quoi  ?",
-        options: ["chrome", "bbb", "sss", "ddd"],
-        answer: "0"
-      },{
-        question: "HMTL est ",
-        options: ["a2", "b2", "c2", "d2"],
-        answer: "2"
-      },{
-        question: "Render app",
-        options: ["a3", "b3", "c3", "d3"],
-        answer: "3"
-      },{
-        question: "How heavy are you?",
-        options: ["a3", "b3", "c3", "d3"],
-        answer: "1"
-      },{
-        question: "How heavy are you?",
-        options: ["a3", "b3", "c3", "d3"],
-        answer: "1"
-      },{
-        question: "How heavy are you?",
-        options: ["a3", "b3", "c3", "d3"],
-        answer: "1"
-      },{
-        question: "How heavy are you?",
-        options: ["a3", "b3", "c3", "d3"],
-        answer: "1"
-      }
+        question: 'DOM cest quoi  ?',
+        options: ['chrome', 'bbb', 'sss', 'ddd'],
+        answer: '0',
+      },
+      {
+        question: 'HMTL est ',
+        options: ['a2', 'b2', 'c2', 'd2'],
+        answer: '2',
+      },
+      {
+        question: 'Render app',
+        options: ['a3', 'b3', 'c3', 'd3'],
+        answer: '3',
+      },
+      {
+        question: 'How heavy are you?',
+        options: ['a3', 'b3', 'c3', 'd3'],
+        answer: '1',
+      },
+      {
+        question: 'How heavy are you?',
+        options: ['a3', 'b3', 'c3', 'd3'],
+        answer: '1',
+      },
+      {
+        question: 'How heavy are you?',
+        options: ['a3', 'b3', 'c3', 'd3'],
+        answer: '1',
+      },
+      {
+        question: 'How heavy are you?',
+        options: ['a3', 'b3', 'c3', 'd3'],
+        answer: '1',
+      },
     ],
   },
   {
@@ -65,14 +71,15 @@ const QCM: Array<IQCMInterface> = [
     exerciseTitle: 'Manipuler le style',
     quiz: [
       {
-        question: "LEs styles  ?",
-        options: ["css", "jss", "xss", "pdf"],
-        answer: "0"
-      },{
-        question: "HMTL est ",
-        options: ["a2", "b2", "c2", "d2"],
-        answer: "2"
-      } 
+        question: 'LEs styles  ?',
+        options: ['css', 'jss', 'xss', 'pdf'],
+        answer: '0',
+      },
+      {
+        question: 'HMTL est ',
+        options: ['a2', 'b2', 'c2', 'd2'],
+        answer: '2',
+      },
     ],
   },
 ]
@@ -80,6 +87,6 @@ const QCM: Array<IQCMInterface> = [
 //export default QCM;
 
 const QcmComponent = () => {
-  return (<>{ JSON.stringify(QCM, null, 2) }</>);
+  return <>{JSON.stringify(QCM, null, 2)}</>
 }
 export default QcmComponent

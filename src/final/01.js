@@ -9,10 +9,9 @@ const fileName = '01.js'
 function App() {
   return (
     <div>
-      <HowToTests solution={true} fileName={fileName}  />
+      <HowToTests solution={true} fileName={fileName} />
     </div>
   )
 }
 
 export default App
-

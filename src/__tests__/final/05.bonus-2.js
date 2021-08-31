@@ -1,10 +1,10 @@
 // mocker les requêtes HTTP
-// 🚀 réutilisation des requêtes HTTP Mock 
+// 🚀 réutilisation des requêtes HTTP Mock
 // http://localhost:3000/alone/final/02.js
 
 import * as React from 'react'
 import LoginSubmit from '../../components/loginSubmit'
-import {render,screen, waitForElementToBeRemoved} from '@testing-library/react'
+import {render, screen, waitForElementToBeRemoved} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import faker from 'faker'
 
@@ -16,10 +16,9 @@ const server = setupServer(...mockHandlers)
 beforeAll(() => server.listen())
 afterAll(() => server.close())
 
-test('login api affiche le nom de l\'utilisateur connecté" ',async () => {
+test('login api affiche le nom de l\'utilisateur connecté" ', async () => {
+  render(<LoginSubmit />)
 
-  render(<LoginSubmit/>)
-  
   const username = faker.internet.userName()
   const password = faker.internet.password()
 
@@ -33,8 +32,4 @@ test('login api affiche le nom de l\'utilisateur connecté" ',async () => {
 
   await waitForElementToBeRemoved(() => screen.getByText(/chargement.../i))
   expect(screen.getByText(username)).toBeInTheDocument()
-
 })
-
-
-

@@ -14,25 +14,24 @@ function LoginSubmit() {
     if (body) {
       setFetchStatus({status: 'feching', payload: ''})
       fetch(endpoint, {
-          method: 'POST',
-          body: body,
-          headers: {
-            'content-type': 'application/json',
-          },
-        })
-        .then(async response => {
-          const data = await response.json()
-          if (response.ok) {
-            setFetchStatus({status: 'done', payload: data})
-          } else {
-            setFetchStatus({status: 'error', payload: data})
-          }
-        })
-        //.catch(err => setFetchStatus({status: 'error', payload: {errorMessage :err.message}}))
+        method: 'POST',
+        body: body,
+        headers: {
+          'content-type': 'application/json',
+        },
+      }).then(async response => {
+        const data = await response.json()
+        if (response.ok) {
+          setFetchStatus({status: 'done', payload: data})
+        } else {
+          setFetchStatus({status: 'error', payload: data})
+        }
+      })
+      //.catch(err => setFetchStatus({status: 'error', payload: {errorMessage :err.message}}))
       //  .catch(err => setFetchStatus({status: 'error', payload: {errorMessage :"le username est obligatoire"}}))
     }
   }, [dataToSubmit, body])
-//console.log("fetchStatus",fetchStatus)
+  //console.log("fetchStatus",fetchStatus)
   return (
     <div>
       {fetchStatus.status === 'feching' ? 'chargement...' : null}

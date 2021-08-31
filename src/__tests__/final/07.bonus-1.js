@@ -8,9 +8,8 @@ import GeoLoc from '../../components/geoloc'
 
 jest.mock('react-use-geolocation')
 
-test('affiche un message d erreur quand la geolocalisation n\'est pas supporté', async () => {
-
-  const fakeError = {message: "la géolocalisation est non supporté"}
+test("affiche un message d erreur quand la geolocalisation n'est pas supporté", async () => {
+  const fakeError = {message: 'la géolocalisation est non supporté'}
 
   let setValue
   function useMock() {
@@ -23,9 +22,10 @@ test('affiche un message d erreur quand la geolocalisation n\'est pas supporté'
   expect(screen.getByText(/chargement/i)).toBeInTheDocument()
 
   act(() => {
-    setValue([null,fakeError])
+    setValue([null, fakeError])
   })
   expect(screen.queryByLabelText(/chargement/i)).not.toBeInTheDocument()
-  expect(screen.queryByText(/la géolocalisation est non supporté/i)).toBeInTheDocument()
-
+  expect(
+    screen.queryByText(/la géolocalisation est non supporté/i),
+  ).toBeInTheDocument()
 })

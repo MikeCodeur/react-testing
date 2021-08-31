@@ -29,5 +29,4 @@ function Welcome({children, bye = false}) {
   )
 }
 
-
 export default Welcome

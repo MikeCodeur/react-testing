@@ -1,14 +1,10 @@
-// Test en boite noir 
+// Test en boite noir
 // http://localhost:3000/alone/final/03.js
 /* eslint-disable no-unused-vars */
 
 import * as React from 'react'
 import LoginSubmitNotification from '../../components/loginSubmitNotification'
-import {
-  render,
-  screen,
-  waitForElementToBeRemoved,
-} from '@testing-library/react'
+import {render, screen, waitForElementToBeRemoved} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import faker from 'faker'
 import mockHandlers from '../../test/mock-handlers'
@@ -25,22 +21,15 @@ afterEach(() => server.resetHandlers())
 
 test('affiche un message de permission `granted` de notification" ', async () => {
   // 🐶 créé un variable 'fakePermission' qui vaut 'granted'
-
   // 🐶 appelle mockImplementation sur 'window.Notification.requestPermission' et passe en paramètre une fonction qui return fakePermission
   // 🤖 () => {return fakePermission}
-
   // 🐶 appelle render de <LoginSubmitNotification />
-
   // 🐶 créé deux variables 'username' et 'password' avec des fakes donnée en utilisant faker
-
   // 🐶 récupère 'usernameElement' 'passwordElement' 'submitbuttonElement' avec getByText getByRole comme précedement
   // 🐶 ajoute 'username' 'usernameElement' / 'password' dans 'passwordElement'
   // 🐶 simule un clik sur sur 'submitbuttonElement'
-
   // 🐶 utlise waitForElementToBeRemoved pour attendre la fin d'affichage du texte 'chargement...'
- 
   // 🐶 verifie que le texte "Les notifications sont autorisés" se trouve dans le document
-
 })
 
 test('affiche un message de permission `denied` de notification" ', async () => {

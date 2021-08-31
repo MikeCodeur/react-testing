@@ -16,7 +16,7 @@ const server = setupServer(...mockHandlers)
 
 beforeAll(() => server.listen())
 afterAll(() => server.close())
-afterEach(()=> server.resetHandlers() )
+afterEach(() => server.resetHandlers())
 
 test('login api affiche le nom de l\'utilisateur connecté" ', async () => {
   render(<LoginSubmit />)

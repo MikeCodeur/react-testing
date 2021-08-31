@@ -17,11 +17,11 @@ test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
   // ⛏️ supprime la création de la div principale, testing-library s'occupe de ça.
   const div = document.createElement('div')
   document.body.append(div)
-  
-  // 🐶 Utilise le `render` de testing-library. 
+
+  // 🐶 Utilise le `render` de testing-library.
   // Note : Aucune div est necessaire à la création.
   // render retourne un objet avec avec tout un tas de choses utilise pour nos tests
-  // mais ici nous allons uniquement utiliser le 'container' qui est l'élement DOM 
+  // mais ici nous allons uniquement utiliser le 'container' qui est l'élement DOM
   // contenant notre composant
   // 🤖 const {container} = render(<Hello name="John" />)
   ReactDOM.render(<Hello name="John" />, div)
@@ -40,4 +40,3 @@ test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
   envoyer.dispatchEvent(envoyerClickEvent)
   expect(label.textContent).toBe(`Merci`)
 })
-

@@ -8,14 +8,14 @@ import HowToTests from '../components/howToTest'
 const fileName = '02.js'
 
 function App() {
-  const handleSubmit = ({username,password}) => {
+  const handleSubmit = ({username, password}) => {
     console.log(`submit avec ${username}, ${password}`)
   }
   return (
     <div>
       <LoginForm onSubmit={handleSubmit} />
-      <hr/>
-      <HowToTests solution={false} fileName={fileName}  />
+      <hr />
+      <HowToTests solution={false} fileName={fileName} />
     </div>
   )
 }

@@ -6,7 +6,7 @@ import {render, act} from '@testing-library/react'
 import useCapitalize from '../../components/useCapitalize'
 
 test('rendu du hook useCapitalize est des fonctions capitalize/uncapitalize', () => {
-  const texte = "Ceci Est Un Test"
+  const texte = 'Ceci Est Un Test'
   let result
   function Component() {
     result = useCapitalize(texte)
@@ -19,5 +19,3 @@ test('rendu du hook useCapitalize est des fonctions capitalize/uncapitalize', ()
   act(() => result.uncapitalize())
   expect(result.text).toBe(texte.toLowerCase())
 })
-
- 

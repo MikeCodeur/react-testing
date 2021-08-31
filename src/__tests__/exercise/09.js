@@ -1,4 +1,4 @@
-// Test en boite noir 
+// Test en boite noir
 // http://localhost:3000/alone/final/03.js
 /* eslint-disable no-unused-vars */
 
@@ -15,19 +15,14 @@ import userEvent from '@testing-library/user-event'
 // un bouton uncapitalize
 // <UseCapitalizeHook>Ceci est un texte</UseCapitalizeHook>
 
-
 test('rendu du hook useCapitalize est des fonctions capitalize/uncapitalize', () => {
   // 🐶 créé une variable 'texte' avec un texte à tester
   // 🐶 fais le rendu du composant avec le texte
   // 🤖 render(<UseCapitalizeHook>{texte}</UseCapitalizeHook>)
- 
   // 🐶 recupère les 2 buttons capitalize/uncapitalize
-
   // 🐶 teste que la valeur du libellé du composant soit bien égale à 'texte'
-  
   // 🐶 simule un click sur capitalize
   // 🐶 teste que la valeur du libellé du composant soit bien égale à 'texte.toUpperCase()'
-
   // 🐶 simule un click sur uncapitalize
   // 🐶 teste que la valeur du libellé du composant soit bien égale à 'texte.toLowerCase()'
 })

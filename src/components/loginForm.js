@@ -11,7 +11,7 @@ function LoginForm({onSubmit}) {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="username">Nom d'utilisateur :</label>
-      <input 
+      <input
         id="username"
         type="text"
         value={username}
@@ -33,4 +33,4 @@ function LoginForm({onSubmit}) {
   )
 }
 
-export default LoginForm;
+export default LoginForm

@@ -15,4 +15,3 @@ test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
   fireEvent.click(envoyer)
   expect(label).toHaveTextContent(`Merci`)
 })
-

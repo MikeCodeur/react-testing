@@ -1,12 +1,12 @@
-// Test en boite noir 
+// Test en boite noir
 // http://localhost:3000/alone/final/02.js
 
 import * as React from 'react'
 import Hello from '../../components/helloreset'
-import {render,screen, fireEvent} from '@testing-library/react'
+import {render, screen, fireEvent} from '@testing-library/react'
 
 test('Affiche "Bonjour John" et "Merci" lors d\'un click avec reset', () => {
-  render(<Hello name="John"/>)
+  render(<Hello name="John" />)
   const envoyer = screen.getByRole('button', {name: /envoyer/i})
   const reset = screen.getByRole('button', {name: /reset/i})
   const label = screen.getByRole('status')
@@ -17,6 +17,3 @@ test('Affiche "Bonjour John" et "Merci" lors d\'un click avec reset', () => {
   fireEvent.click(reset)
   expect(label).toHaveTextContent(`Bonjour John`)
 })
-
-
-

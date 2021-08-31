@@ -19,7 +19,6 @@ test('rendu du composent Welcome avec la langue fr', () => {
 })
 
 test('rendu du composent Welcome avec la langue en', () => {
-  renderWithProviders(<Welcome>John</Welcome>,{lang : 'en'})
+  renderWithProviders(<Welcome>John</Welcome>, {lang: 'en'})
   expect(screen.queryByText(/Hello and welcome/i)).toBeInTheDocument()
 })
-

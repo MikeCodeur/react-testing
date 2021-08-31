@@ -1,4 +1,4 @@
-// Test en boite noir 
+// Test en boite noir
 // http://localhost:3000/alone/final/03.js
 
 import * as React from 'react'
@@ -12,8 +12,8 @@ test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
   // 🐶 utilise `getByRole` pour recupérer un 'button'
   // 📑 https://testing-library.com/docs/queries/byrole/
   // 🤖 screen.getByRole('button')
-  // Ici nous avons maintenant 2 buttons, pour pouvoir les distinguer il est possible 
-  // ajouter un 2eme argument. nous allons utiliser 'name' pour savoir si 
+  // Ici nous avons maintenant 2 buttons, pour pouvoir les distinguer il est possible
+  // ajouter un 2eme argument. nous allons utiliser 'name' pour savoir si
   // l'on veut le bouton 'envoyer' ou 'reset'
   // 🤖 screen.getByRole('button', {name: /envoyer/i})
   const [envoyer, reset] = container.querySelectorAll('input')
@@ -27,4 +27,3 @@ test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
   fireEvent.click(reset)
   expect(label).toHaveTextContent(`Bonjour John`)
 })
-

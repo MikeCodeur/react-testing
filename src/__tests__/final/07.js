@@ -8,7 +8,7 @@ import GeoLoc from '../../components/geoloc'
 
 jest.mock('react-use-geolocation')
 
-test('affiche la géolocalisation de l\'utilisateur', async () => {
+test("affiche la géolocalisation de l'utilisateur", async () => {
   const fakePosition = {
     coords: {
       latitude: 52,

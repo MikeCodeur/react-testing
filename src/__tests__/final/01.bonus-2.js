@@ -12,7 +12,7 @@ beforeEach(() => {
 test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
   const div = document.createElement('div')
   document.body.append(div)
-  
+
   ReactDOM.render(<Hello name="John" />, div)
 
   const envoyer = div.querySelector('input')
