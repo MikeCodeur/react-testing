@@ -1,6 +1,5 @@
 // test basique avec ReactDOM
 // 🚀 Initialisation du DOM pour les tests
-// http://localhost:3000/alone/final/01.js
 
 import ReactDOM from 'react-dom'
 import Hello from '../../components/hello'

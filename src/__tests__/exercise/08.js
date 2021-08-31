@@ -1,5 +1,5 @@
-// Test en boite noir
-// http://localhost:3000/alone/final/03.js
+// test avec Context
+// http://localhost:3000/alone/exercise/08.js
 /* eslint-disable no-unused-vars */
 
 import * as React from 'react'

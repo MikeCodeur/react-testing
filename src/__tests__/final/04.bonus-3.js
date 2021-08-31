@@ -1,6 +1,5 @@
-// Test en boite noir
-// 🚀 dispatchEvent et MouseEven
-// http://localhost:3000/alone/final/02.js
+// Test de formulaires
+// 🚀 Données de tests
 
 import * as React from 'react'
 import LoginForm from '../../components/loginForm'

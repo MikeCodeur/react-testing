@@ -1,5 +1,5 @@
-// mocker les requêtes HTTP
-// http://localhost:3000/alone/final/05.js
+// test de Hook personnalisé
+// 🚀 @testing-library/react-hooks
 
 import * as React from 'react'
 import {renderHook, act} from '@testing-library/react-hooks'

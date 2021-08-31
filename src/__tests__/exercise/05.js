@@ -1,5 +1,5 @@
-// Test en boite noir
-// http://localhost:3000/alone/final/03.js
+// mocker les requêtes HTTP
+// http://localhost:3000/alone/exercise/05.js
 
 import * as React from 'react'
 import LoginSubmit from '../../components/loginSubmit'

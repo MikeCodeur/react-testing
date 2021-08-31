@@ -1,5 +1,4 @@
 // test avec React Testing Library
-// http://localhost:3000/alone/final/02.js
 
 import * as React from 'react'
 import Hello from '../../components/hello'

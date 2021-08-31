@@ -1,5 +1,5 @@
-// mocker les requêtes HTTP
-// http://localhost:3000/alone/final/05.js
+// mocker un module
+// 🚀 Tester le cas non supporté
 
 import * as React from 'react'
 import {render, screen, act} from '@testing-library/react'

@@ -1,5 +1,5 @@
-// Mocker axios
-// http://localhost:3000/alone/final/05.js
+// mocker un module
+// 🚀 Mocker axios
 
 import * as React from 'react'
 import LoginSubmit from '../../components/loginSubmitAxios'

@@ -1,6 +1,6 @@
 // eviter les detail d'implementation
-// 🚀 dispatchEvent et MouseEven
-// http://localhost:3000/alone/final/01.js
+// 🚀 Utilisation de @testing-library/jest-dom
+
 
 import * as React from 'react'
 import Hello from '../../components/hello'

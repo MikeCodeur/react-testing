@@ -1,5 +1,4 @@
-// Test en boite noir
-// http://localhost:3000/alone/final/02.js
+// Test de formulaires
 
 import * as React from 'react'
 import LoginForm from '../../components/loginForm'

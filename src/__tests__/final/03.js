@@ -1,5 +1,4 @@
 // Test en boite noir
-// http://localhost:3000/alone/final/02.js
 
 import * as React from 'react'
 import Hello from '../../components/helloreset'

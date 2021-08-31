@@ -1,5 +1,5 @@
 // test avec React Testing Library
-// http://localhost:3000/alone/final/02.js
+// http://localhost:3000/alone/exercise/02.js
 
 import * as React from 'react'
 // ⛏️ supprime l'import de 'react-dom' il n'est plus necessaire.

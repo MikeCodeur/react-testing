@@ -1,7 +1,7 @@
-// Test en boite noir
-// http://localhost:3000/alone/final/03.js
-/* eslint-disable no-unused-vars */
+// mocker l'API du navigateur
+// http://localhost:3000/alone/exercise/06.js
 
+/* eslint-disable no-unused-vars */
 import * as React from 'react'
 import LoginSubmitNotification from '../../components/loginSubmitNotification'
 import {render, screen, waitForElementToBeRemoved} from '@testing-library/react'

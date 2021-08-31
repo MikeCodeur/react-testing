@@ -1,5 +1,4 @@
 // test basique avec ReactDOM
-// http://localhost:3000/alone/final/01.js
 
 import * as React from 'react'
 import ReactDOM from 'react-dom'

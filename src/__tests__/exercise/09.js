@@ -1,7 +1,7 @@
-// Test en boite noir
-// http://localhost:3000/alone/final/03.js
-/* eslint-disable no-unused-vars */
+// test de Hook personnalisé
+// http://localhost:3000/alone/exercise/09.js
 
+/* eslint-disable no-unused-vars */
 import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 import useCapitalize from '../../components/useCapitalize'

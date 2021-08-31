@@ -3,14 +3,14 @@
 
 import * as React from 'react'
 import '../styles.css'
-import LoginSubmitStorage from '../components/loginSubmitNotification'
+import GeoLoc from '../components/geoloc'
 import HowToTests from '../components/howToTest'
-const fileName = '02.js'
+const fileName = '07.js'
 
 function App() {
   return (
     <div>
-      <LoginSubmitStorage />
+      <GeoLoc />
       <hr />
       <HowToTests solution={false} fileName={fileName} />
     </div>

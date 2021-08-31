@@ -1,5 +1,4 @@
-// mocker les requêtes HTTP
-// http://localhost:3000/alone/final/05.js
+// test avec Context
 
 import * as React from 'react'
 import {render, screen} from '@testing-library/react'

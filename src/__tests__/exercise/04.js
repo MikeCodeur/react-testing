@@ -1,7 +1,7 @@
-// Test en boite noir
-// http://localhost:3000/alone/final/03.js
-/* eslint-disable no-unused-vars */
+// Test de formulaires
+// http://localhost:3000/alone/exercise/04.js
 
+/* eslint-disable no-unused-vars */
 import * as React from 'react'
 import LoginForm from '../../components/loginForm'
 import {render, screen, fireEvent} from '@testing-library/react'

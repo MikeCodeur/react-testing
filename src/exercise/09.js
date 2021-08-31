@@ -3,32 +3,28 @@
 
 import * as React from 'react'
 import '../styles.css'
-import LoginSubmitStorage from '../components/loginSubmitNotification'
+import useCapitalize from '../components/useCapitalize'
 import HowToTests from '../components/howToTest'
-import {useLang, LangProvider} from '../components/lang'
-import Welcome from '../components/welcome'
-const fileName = '02.js'
+const fileName = '09.js'
 
-function App() {
+function UseCapitalizeHook({children}) {
+  const {text, capitalize, uncapitalize} = useCapitalize(children)
   return (
     <div>
-      <LangProvider initialLang="en">
-        <Welcome bye={true}>John</Welcome>
-        <LangChanger />
-      </LangProvider>
-
-      <hr />
-      <HowToTests solution={false} fileName={fileName} />
+      <div>texte transformé: {text}</div>
+      <button onClick={capitalize}>capitalize</button>
+      <button onClick={uncapitalize}>uncapitalize</button>
     </div>
   )
 }
 
-function LangChanger() {
-  const [lang, setLang] = useLang()
+function App() {
   return (
-    <button onClick={() => setLang(t => (t === 'fr' ? 'en' : 'fr'))}>
-      changer la langue: {lang}
-    </button>
+    <div>
+      <UseCapitalizeHook>Hello World</UseCapitalizeHook>
+      <hr />
+      <HowToTests solution={false} fileName={fileName} />
+    </div>
   )
 }
 

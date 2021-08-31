@@ -1,6 +1,5 @@
-// Test en boite noir
-// 🚀 dispatchEvent et MouseEven
-// http://localhost:3000/alone/final/02.js
+// Test de formulaires
+// 🚀 Utilisation d'un fonction Mock de Jest
 
 import * as React from 'react'
 import LoginForm from '../../components/loginForm'

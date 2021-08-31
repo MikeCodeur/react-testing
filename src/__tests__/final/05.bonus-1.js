@@ -1,6 +1,5 @@
-// Test en boite noir
+// mocker les requêtes HTTP
 // 🚀 waitForElementToBeRemoved
-// http://localhost:3000/alone/final/02.js
 
 import * as React from 'react'
 import LoginSubmit from '../../components/loginSubmit'

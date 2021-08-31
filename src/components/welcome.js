@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {useLang, LangProvider} from '../components/lang'
+import {useLang} from '../components/lang'
 
 const messages = {
   fr: {

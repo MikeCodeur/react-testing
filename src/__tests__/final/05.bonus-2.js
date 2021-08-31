@@ -1,6 +1,5 @@
 // mocker les requêtes HTTP
 // 🚀 réutilisation des requêtes HTTP Mock
-// http://localhost:3000/alone/final/02.js
 
 import * as React from 'react'
 import LoginSubmit from '../../components/loginSubmit'
