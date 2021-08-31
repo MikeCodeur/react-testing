@@ -5,8 +5,6 @@ import * as React from 'react'
 import {render, screen} from '../../test/test-utils'
 import Welcome from '../../components/welcome'
 
-
-
 test('rendu du composent Welcome avec la langue fr', () => {
   render(<Welcome>John</Welcome>)
   expect(screen.queryByText(/Bonjour et bienvenue/i)).toBeInTheDocument()

@@ -9,11 +9,7 @@ function GeoLoc() {
   }
 
   if (error) {
-    return (
-      <div role="alert">
-        {error.message}
-      </div>
-    )
+    return <div role="alert">{error.message}</div>
   }
 
   return (
