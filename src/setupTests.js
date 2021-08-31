@@ -1,1 +1,1 @@
-import '@mikecodeur/react-course-app/setup-tests'
+import '@testing-library/jest-dom/extend-expect'

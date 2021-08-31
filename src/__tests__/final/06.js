@@ -6,7 +6,6 @@ import LoginSubmitNotification from '../../components/loginSubmitNotification'
 import {
   render,
   screen,
-  act,
   waitForElementToBeRemoved,
 } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -22,32 +21,17 @@ beforeAll(() => {
     requestPermission: jest.fn(),
   }
 })
-
-//beforeAll(() => server.listen())
 afterAll(() => server.close())
 afterEach(() => server.resetHandlers())
 
-function deferred() {
-  let resolve, reject
-  const promise = new Promise((res, rej) => {
-    resolve = res
-    reject = rej
-  })
-  return {promise, resolve, reject}
-}
-
 test('affiche un message de permission `granted` de notification" ', async () => {
-  const {promise, resolve} = deferred()
+
   const fakePermission = 'granted'
 
   window.Notification.requestPermission.mockImplementation(() => {
     return fakePermission
   })
 
-  await act(async () => {
-    resolve()
-    await promise
-  })
   render(<LoginSubmitNotification />)
   const username = faker.internet.userName()
   const password = faker.internet.password()
@@ -68,16 +52,10 @@ test('affiche un message de permission `granted` de notification" ', async () =>
 })
 
 test('affiche un message de permission `denied` de notification" ', async () => {
-  const {promise, resolve} = deferred()
   const fakePermission = 'denied'
 
   window.Notification.requestPermission.mockImplementation(() => {
     return fakePermission
-  })
-
-  await act(async () => {
-    resolve()
-    await promise
   })
   render(<LoginSubmitNotification />)
   const username = faker.internet.userName()
@@ -92,12 +70,9 @@ test('affiche un message de permission `denied` de notification" ', async () => 
   userEvent.click(submitbuttonElement)
 
   await waitForElementToBeRemoved(() => screen.getByText(/chargement.../i))
-  window.navigator = {onLine: false}
 
   expect(
     screen.getByText(/veuillez autoriser les notifications/i),
   ).toBeInTheDocument()
-  console.log('global.navigato.onLine', window.navigator.onLine)
-
   
 })

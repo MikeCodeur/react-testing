@@ -1,12 +1,12 @@
 // Test en boite noir 
 // http://localhost:3000/alone/final/03.js
+/* eslint-disable no-unused-vars */
 
 import * as React from 'react'
 import LoginSubmitNotification from '../../components/loginSubmitNotification'
 import {
   render,
   screen,
-  act,
   waitForElementToBeRemoved,
 } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -18,86 +18,32 @@ const server = setupServer(...mockHandlers)
 
 beforeAll(() => {
   server.listen()
-  window.Notification = {
-    requestPermission: jest.fn(),
-  }
+  // 🐶 met à jour la valeur de 'window.Notification' avec un objet 'requestPermission' qui veut jest.fn()
 })
-
-//beforeAll(() => server.listen())
 afterAll(() => server.close())
 afterEach(() => server.resetHandlers())
 
-function deferred() {
-  let resolve, reject
-  const promise = new Promise((res, rej) => {
-    resolve = res
-    reject = rej
-  })
-  return {promise, resolve, reject}
-}
-
 test('affiche un message de permission `granted` de notification" ', async () => {
-  const {promise, resolve} = deferred()
-  const fakePermission = 'granted'
+  // 🐶 créé un variable 'fakePermission' qui vaut 'granted'
 
-  window.Notification.requestPermission.mockImplementation(() => {
-    return fakePermission
-  })
+  // 🐶 appelle mockImplementation sur 'window.Notification.requestPermission' et passe en paramètre une fonction qui return fakePermission
+  // 🤖 () => {return fakePermission}
 
-  await act(async () => {
-    resolve()
-    await promise
-  })
-  render(<LoginSubmitNotification />)
-  const username = faker.internet.userName()
-  const password = faker.internet.password()
+  // 🐶 appelle render de <LoginSubmitNotification />
 
-  const usernameElement = screen.getByText(/Nom d'utilisateur :/i)
-  const passwordElement = screen.getByText(/Mot de passe :/i)
-  const submitbuttonElement = screen.getByRole('button', {name: /Connexion/i})
+  // 🐶 créé deux variables 'username' et 'password' avec des fakes donnée en utilisant faker
 
-  userEvent.type(usernameElement, username)
-  userEvent.type(passwordElement, password)
-  userEvent.click(submitbuttonElement)
+  // 🐶 récupère 'usernameElement' 'passwordElement' 'submitbuttonElement' avec getByText getByRole comme précedement
+  // 🐶 ajoute 'username' 'usernameElement' / 'password' dans 'passwordElement'
+  // 🐶 simule un clik sur sur 'submitbuttonElement'
 
-  await waitForElementToBeRemoved(() => screen.getByText(/chargement.../i))
+  // 🐶 utlise waitForElementToBeRemoved pour attendre la fin d'affichage du texte 'chargement...'
+ 
+  // 🐶 verifie que le texte "Les notifications sont autorisés" se trouve dans le document
 
-  expect(
-    screen.getByText(/Les notifications sont autorisés/i),
-  ).toBeInTheDocument()
 })
 
 test('affiche un message de permission `denied` de notification" ', async () => {
-  const {promise, resolve} = deferred()
-  const fakePermission = 'denied'
-
-  window.Notification.requestPermission.mockImplementation(() => {
-    return fakePermission
-  })
-
-  await act(async () => {
-    resolve()
-    await promise
-  })
-  render(<LoginSubmitNotification />)
-  const username = faker.internet.userName()
-  const password = faker.internet.password()
-
-  const usernameElement = screen.getByText(/Nom d'utilisateur :/i)
-  const passwordElement = screen.getByText(/Mot de passe :/i)
-  const submitbuttonElement = screen.getByRole('button', {name: /Connexion/i})
-
-  userEvent.type(usernameElement, username)
-  userEvent.type(passwordElement, password)
-  userEvent.click(submitbuttonElement)
-
-  await waitForElementToBeRemoved(() => screen.getByText(/chargement.../i))
-  window.navigator = {onLine: false}
-
-  expect(
-    screen.getByText(/veuillez autoriser les notifications/i),
-  ).toBeInTheDocument()
-  console.log('global.navigato.onLine', window.navigator.onLine)
-
-  
+  // 🐶 même test que précédement sauf que fakePermission = 'denied'
+  // 🐶 verifie que le texte "veuillez autoriser les notifications" se trouve dans le document
 })

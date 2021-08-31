@@ -22,7 +22,9 @@
     "chalk": "^4.1.1",
     "codegen.macro": "^4.1.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-hook-screen-orientation": "^1.0.1",
+    "react-use-geolocation": "^0.1.1"
   },
   "devDependencies": {
     "faker": "^5.5.3",

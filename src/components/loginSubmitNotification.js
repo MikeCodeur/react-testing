@@ -8,6 +8,7 @@ function LoginSubmit() {
     payload: '',
   })
   const [permission, setPermission] = React.useState(null)
+
   
   const askPerm = async () => {
     let perm = await window.Notification.requestPermission()
