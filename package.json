@@ -1,0 +1,91 @@
+{
+  "name": "@mikecodeur/react-testing",
+  "title": "React Testing Module",
+  "description": "Module sur les tests de la formation React Mastery",
+  "author": "Mike Codeur <contact@mikecodeur.com> (https://mikecodeur.com/)",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [],
+  "homepage": "https://react-testing.mikecodeur.com",
+  "license": "GPL-3.0-only",
+  "main": "src/index.js",
+  "engines": {
+    "node": "12 || 14 || 15 || 16",
+    "npm": ">=6"
+  },
+  "dependencies": {
+    "@mikecodeur/react-course-app": "0.0.8",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/react-hooks": "^7.0.1",
+    "@testing-library/user-event": "^13.1.9",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1",
+    "codegen.macro": "^4.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-screen-orientation": "^1.0.1",
+    "react-use-geolocation": "^0.1.1"
+  },
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "husky": "^4.3.8",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.1",
+    "react-scripts": "^4.0.3",
+    "typescript": "^4.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "test:coverage": "npm run test -- --watchAll=false",
+    "init": "node install",
+    "lint": "eslint .",
+    "format": "prettier --write \"./src\"",
+    "validate": "npm-run-all --parallel build test:coverage lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "node ./scripts/pre-commit",
+      "pre-push": "node ./scripts/pre-push"
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/final/**/*.js"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "babel": {
+    "presets": [
+      "babel-preset-react-app"
+    ]
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">1%",
+      "last 4 versions",
+      "Firefox ESR",
+      "not ie < 11"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikecodeur/react-testing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikecodeur/react-testing/issues"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}
