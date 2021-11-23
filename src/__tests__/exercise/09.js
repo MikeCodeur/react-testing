@@ -10,7 +10,7 @@ import userEvent from '@testing-library/user-event'
 // 🐶 créé un composant <UseCapitalizeHook> qui utilise le hook 'useCapitalize'
 // le hook s'utilise de la manière suivante
 // 🤖 const {text, capitalize, uncapitalize} = useCapitalize(children)
-// ce composant aura un libéllé qui affiche text
+// ce composant aura un libéllé qui affiche :  texte transformé: {text}{text}
 // un bouton capitalize
 // un bouton uncapitalize
 // <UseCapitalizeHook>Ceci est un texte</UseCapitalizeHook>

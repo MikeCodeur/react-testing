@@ -20,7 +20,7 @@ test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
 
   // 🐶 Utilise le `render` de testing-library.
   // Note : Aucune div est necessaire à la création.
-  // render retourne un objet avec avec tout un tas de choses utilise pour nos tests
+  // render retourne un objet avec avec tout un tas de choses utiles pour nos tests
   // mais ici nous allons uniquement utiliser le 'container' qui est l'élement DOM
   // contenant notre composant
   // 🤖 const {container} = render(<Hello name="John" />)
