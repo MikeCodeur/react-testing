@@ -8,7 +8,7 @@ import Welcome from '../../components/welcome'
 
 function renderWithProviders(ui, {lang = 'fr', ...options} = {}) {
   const Wrapper = ({children}) => (
-    <LangProvider value={[lang, () => {}]}>{children}</LangProvider>
+    <LangProvider initialLang={lang}>{children}</LangProvider>
   )
   return render(ui, {wrapper: Wrapper, ...options})
 }

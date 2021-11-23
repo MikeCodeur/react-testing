@@ -71,7 +71,7 @@ const QCM: Array<IQCMInterface> = [
   },
   {
     exerciseId: 'src/exercise/06.md',
-    exerciseTitle: 'mocker l\'API du navigateur',
+    exerciseTitle: "mocker l'API du navigateur",
     quiz: [
       {
         question: 'Valide simplement cet exercice en cliquant sur validé',

@@ -14,7 +14,7 @@ const server = setupServer(...mockHandlers)
 
 beforeAll(() => {
   server.listen()
-  // 🐶 met à jour la valeur de 'window.Notification' avec un objet 'requestPermission' qui veut jest.fn()
+  // 🐶 met à jour la valeur de 'window.Notification' avec un objet 'requestPermission' qui vaut jest.fn()
 })
 afterAll(() => server.close())
 afterEach(() => server.resetHandlers())

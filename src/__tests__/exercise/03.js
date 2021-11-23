@@ -3,6 +3,7 @@
 
 import * as React from 'react'
 import Hello from '../../components/helloreset'
+// eslint-disable-next-line no-unused-vars
 import {render, screen, fireEvent} from '@testing-library/react'
 
 test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
