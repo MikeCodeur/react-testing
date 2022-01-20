@@ -4,7 +4,7 @@ import * as React from 'react'
 import LoginSubmitNotification from '../../components/loginSubmitNotification'
 import {render, screen, waitForElementToBeRemoved} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import faker from 'faker'
+import faker from '@faker-js/faker'
 import mockHandlers from '../../test/mock-handlers'
 import {setupServer} from 'msw/node'
 
