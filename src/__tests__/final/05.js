@@ -4,7 +4,7 @@ import * as React from 'react'
 import LoginSubmit from '../../components/loginSubmit'
 import {render, screen, waitFor} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import faker from 'faker'
+import faker from '@faker-js/faker'
 
 import {rest} from 'msw'
 import {setupServer} from 'msw/node'
