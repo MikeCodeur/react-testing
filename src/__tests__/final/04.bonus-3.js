@@ -5,7 +5,7 @@ import * as React from 'react'
 import LoginForm from '../../components/loginForm'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import faker from 'faker'
+import faker from '@faker-js/faker'
 
 test('formulaire de login avec username et password" ', () => {
   const handleSubmit = jest.fn()

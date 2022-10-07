@@ -5,7 +5,7 @@ import * as React from 'react'
 import LoginSubmit from '../../components/loginSubmitAxios'
 import {render, screen, waitForElementToBeRemoved} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import faker from 'faker'
+import faker from '@faker-js/faker'
 import axios from 'axios'
 jest.mock('axios')
 
